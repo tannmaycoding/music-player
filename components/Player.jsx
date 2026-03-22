@@ -14,7 +14,7 @@ const Player = () => {
   useEffect(() => {
     if (!audioRef.current) return
 
-    if (isPlaying) {
+    if (isPlaying) { 
       audioRef.current.play()
     } else {
       audioRef.current.pause()
@@ -110,7 +110,7 @@ const Player = () => {
   max={duration || 0}
   value={currentTime}
   onChange={handleSeek}
-  className="seekbar"
+  className="seekbar my-2"
   style={{
     "--progress": `${(currentTime / duration) * 100 || 0}%`,
   }}
